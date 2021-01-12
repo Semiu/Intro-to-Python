@@ -1,4 +1,4 @@
-##Intro-to-Python
+Intro-to-Python
 
 This repo would contain the backend component of Advanced Software Development course CSCi 313 (Spring, 2021 -
 NDSU).
