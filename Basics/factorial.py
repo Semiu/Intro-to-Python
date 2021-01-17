@@ -10,6 +10,6 @@ def factorial(integer):
     factorial = 1 #initialize to 1
     for i in range(1, integer + 1): #A for loop that assigns the value of all the numbers between 1 and the integer to i
         factorial = factorial * i
-    print ("The factorial of " + integer + " is " + factorial)
+    print ("The factorial of " + number + " is " + factorial)
 
 factorial(integer) #Calling the factorial function
