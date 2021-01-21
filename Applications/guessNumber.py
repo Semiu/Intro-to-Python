@@ -11,8 +11,8 @@ while(True):
     computer_digit = random.randint(100,999)
 
     if user_guess == computer_digit:
+        print ("You got it!")
         break
-    print ("You got it!")
     elif user_guess > computer_digit:
         print("Your guess is more than the digits")
         continue
