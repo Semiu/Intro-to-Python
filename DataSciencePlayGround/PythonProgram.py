@@ -17,7 +17,7 @@ from pprint import pprint
 #password
 #password = urllib.parse.quote_plus('AKANMUsemiu'+'%64'+'1984')
 
-URI = "mongodb+srv://taskia:" + 'AKANMUsemiu'+urllib.parse.quote('@') +"@cluster0.z1egk.mongodb.net/vuldB?retryWrites=true&w=majority"
+URI = "mongodb+srv://taskia:" + 'AKANMUsemiu'+urllib.parse.quote('@') +"--MongodB URI---"
 
                                                         # connect to MongoDB, change the << MONGODB URL >> to reflect your own connection string
 client = MongoClient(URI)
