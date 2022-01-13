@@ -14,7 +14,7 @@ Everything Pythonic which is yet to evolve to a full scale standalone project is
 
 `flask`
 
-``machine-learning`
+`machine-learning`
 
 `metaheuristics`
 
