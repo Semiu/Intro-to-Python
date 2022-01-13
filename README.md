@@ -1,3 +1,22 @@
-### Python, Flask, Django and experimenting machine and deep learning stuff!
+### For Python and everything Pythonic!
 
-This is my playground for writing Python code and everything in between!
+Everything Pythonic which is yet to evolve to a full scale standalone project is kept in this repo.
+
+`Basics`
+
+`dashboard`
+
+`data-structure`
+
+`deep-learning`
+
+`Django`
+
+`flask`
+
+``machine-learning`
+
+`metaheuristics`
+
+`OOP`
+
