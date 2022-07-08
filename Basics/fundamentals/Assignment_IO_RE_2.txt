@@ -1,0 +1,19 @@
+File IO
+1)	Write a Python program to read a file line by line and store it into a list.
+2)	Write a Python program to count the frequency of words in a file. 
+Note: Some words can be separated by a comma with no space. 
+3)	Write a Python program to get the file size of a plain file.
+4)	Write a Python program to combine each line from first file with the corresponding line in second file.
+
+Regular Expression
+1)	 Write a Python program that matches a word containing 'z', not at the start or end of the word.	
+2)	Write a Python program to remove the parenthesis area in a string. 
+I/P: ["example (.com)", "summitworks", "github (.com)", "stackoverflow (.com)"]
+O/P:
+example
+summitworks
+github
+stackoverflow
+3)	Write a Python program to split a string with multiple delimiters.
+Note: A delimiter is a sequence of one or more characters used to specify the boundary between separate, independent regions in plain text or other data streams. An example of a delimiter is the comma character, which acts as a field delimiter in a sequence of comma-separated values.
+4)	 Write a Python program to find urls in a string. 
