@@ -12,7 +12,7 @@ Therefore, kindly proceed with caution!
 
 `deep-learning` folder contains scripts and notebooks explaining deep learning using varying frameworks such as Keras, Fastai, and PyTorch.
 
-`Django` folder contains scripts and notebooks explaining the working of the Django framework for building Python MVC applications.
+`Django` folder contains scripts and notebooks explaining the working of the Django framework for building Python MVT applications.
 
 `flask` folder contains scripts and notebooks explaining the working of the Flask framework for building Python web applications.
 
