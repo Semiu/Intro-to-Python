@@ -1,7 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views.generic import TemplateView
 
 
 # Create your views here.
-def homepageview(request):
-    return HttpResponse("Hello, World!")
+# function-based view - described in chapter 2
+#def homepageview(request):
+    #return HttpResponse("Hello, World!")
+
+
+# Class-based view - replaced the function view abloe
+class HomePageView(TemplateView):
+    template_name = "home.html"
