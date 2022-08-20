@@ -6,7 +6,9 @@ Therefore, kindly proceed with caution!
 
 `Basics` folder contains scripts and notebooks explaining basic Python workings, such as string operations, among others.
 
-`dashboard` folder contains scripts and notebooks explaining visualization and dashboard development using Python, and libraries such as Dask.
+`analysis-dashboard` folder contains scripts and notebooks explaining visualization and dashboard development using Python, and libraries such as Dask.
+
+`aws-data-engineering` folder contains scripts and notebooks demonstrating data engineering tasks generally and specifically using AWS cloud environment.
 
 `data-structure` folder contains scripts and notebooks explaining data structure, algorithms and design patterns in Python.
 
