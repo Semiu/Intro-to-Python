@@ -22,5 +22,9 @@ Therefore, kindly proceed with caution!
 
 `metaheuristics` folder contains scripts and notebooks explaining evolutionary computations such as genetic and evolutionary strategies.
 
+`networkanalysis` folder contains scripts and notebooks explaining analysis of network data, such as protein and transportation nodes.
+
+`discrete-maths` folder contains scripts and notebooks explaining the fundamental discrete mathematics for Computer Science generally, and Data Structure and Algorithm specifically.
+
 `OOP` folder contains scripts and notebooks explaining the Python Object-oriented programming.
 
