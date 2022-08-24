@@ -10,8 +10,8 @@ from django.views.generic import TemplateView
 
 
 # Class-based view - replaced the function view above
-class HomePageView(TemplateView):
-    template_name = "home.html"
+#class HomePageView(TemplateView):
+    #template_name = "home.html"
 
 
 class AboutPageView(TemplateView):

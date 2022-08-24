@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Home page</title>
 </head>
+
 <header>
     {% extends "base.html" %}
 </header>
+
 <body>
+
 {% block content %}
+
 <h1>This is Home page</h1>
+
+
+<h1>Message Board Homepage</h1>
+
+<ul>
+    {% for post in post_list %}
+        <li>{{ post.text }}</li>
+    {% endfor %}
+</ul>
+
+
 {% endblock content %}
 
 </body>
+
 </html>
