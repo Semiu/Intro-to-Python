@@ -4,7 +4,7 @@ My Python works which are yet to evolve to a full scale standalone project, or p
 
 Therefore, kindly proceed with caution!
 
-`Basics` folder contains scripts and notebooks explaining basic Python workings, such as string operations, among others.
+`Basics` folder contains scripts and notebooks explaining basic Python workings, such as its primitive data operations, and also basic coding challenges.
 
 `analysis-dashboard` folder contains scripts and notebooks explaining visualization and dashboard development using Python, and libraries such as Dask.
 
