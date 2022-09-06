@@ -8,8 +8,6 @@ Therefore, kindly proceed with caution!
 
 `analysis-dashboard` folder contains scripts and notebooks explaining visualization and dashboard development using Python, and libraries such as Dask.
 
-`aws-data-engineering` folder contains scripts and notebooks demonstrating data engineering tasks generally and specifically using AWS cloud environment.
-
 `data-structure` folder contains scripts and notebooks explaining data structure, algorithms and design patterns in Python.
 
 `deep-learning` folder contains scripts and notebooks explaining deep learning using varying frameworks such as Keras, Tensorflow, and PyTorch.
