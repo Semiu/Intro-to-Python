@@ -19,6 +19,7 @@ def hash_username(username):
 
     return hash_username
 
+
 def validate_username(hashed_register, hashed_login):
     """
     Checks if the hashed username used for registration is the same hashed username used for the login
@@ -26,6 +27,9 @@ def validate_username(hashed_register, hashed_login):
     -----
     hashed_register - hash number of the registered username
     hashed_login - has number of the login username
+    returns
+    ------
+    True if it meets the set criteria
     """
     if hashed_register == hashed_login:
         return True
@@ -33,34 +37,62 @@ def validate_username(hashed_register, hashed_login):
 
 from cryptography.fernet import Fernet
 
+
 def generate_key():
     """
-    Generate a random encryption key.
+    Generates a random encryption key.
     """
     return Fernet.generate_key()
 
+
 def encrypt_password(password, key):
     """
-    Encrypt a password using Fernet symmetric key encryption.
+    Encrypts a password using Fernet symmetric key encryption.
+    params
+    -----
+    password - str: The password to be encrypted
+    key - randomly generated key for the encryption
+    returns
+    -------
+    encrypted password
     """
     cipher_suite = Fernet(key)
     encrypted_password = cipher_suite.encrypt(password.encode())
     return encrypted_password
 
+
 def decrypt_password(encrypted_password, key):
     """
-    Decrypt an encrypted password using Fernet symmetric key decryption.
+    Decrypts an encrypted password using Fernet symmetric key decryption.
+    params
+    ------
+    encrypted_password - encrypted password
+    key - encryption key
+    returns
+    -------
+    decrypted password
     """
     cipher_suite = Fernet(key)
     decrypted_password = cipher_suite.decrypt(encrypted_password).decode()
     return decrypted_password
 
+
 def validate_password(encrypted_password, login_password, key):
     """
+    Validates if the login password is the same as the registered password which is now encrypted
+    params
+    ------
+    encrypted_password - cipher form of the registered password
+    login_password - the log in password
+    key - the encryption key to be used for decryption
+    returns
+    ------
+    True if it meets the set criteria
     """
     decrypted_password = decrypt_password(encrypted_password, key)
     if decrypted_password == login_password:
         return True
+
 
 if __name__ == "__main__":
 
@@ -68,7 +100,7 @@ if __name__ == "__main__":
 
     while working:
 
-        key = generate_key() # Generate key for  the encryption and decryption
+        key = generate_key()  # Generate key for  the encryption and decryption
 
         print(" === Register your username and password === ")
         registered_username = input("Please, enter your username for registration: ")
