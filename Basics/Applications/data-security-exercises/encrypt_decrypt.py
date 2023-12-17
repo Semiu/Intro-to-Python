@@ -117,10 +117,19 @@ if __name__ == "__main__":
         if validate_username(hashed_registered_username, hashed_login_username):
             if validate_password(encrypted_password, login_password, key):
                 print(" Succesfully logged in.")
+                print(f"The hash value of the registered username is {hashed_registered_username}")
+                print(f"The hash value of the login username is {hashed_login_username}")
+                print(f"The ciphertext of the provided password is {encrypted_password}")
             else:
                 print(" Either your password or username is not correct.")
+                print(f"The hash value of the registered username is {hashed_registered_username}")
+                print(f"The hash value of the login username is {hashed_login_username}")
+                print(f"The ciphertext of the provided password is {encrypted_password}")
         else:
             print(" Either your password or username is not correct.")
+            print(f"The hash value of the registered username is {hashed_registered_username}")
+            print(f"The hash value of the login username is {hashed_login_username}")
+            print(f"The ciphertext of the provided password is {encrypted_password}")
 
         prompt_to_work = int(input("Enter 1 to continue, any other number to exit: "))
         if prompt_to_work == 1:
