@@ -9,6 +9,9 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..',
 from cards_proj.src.cards.api import CardsDB
 
 def db_scope(fixture_name, config):
+    """ When pytest receives the --func-db option, it returns function, session otherwise.
+    That is then used as the scope definition in the db fixture
+    """
     if config.getoption("--func-db", None):
         return "function"
     return "session"
