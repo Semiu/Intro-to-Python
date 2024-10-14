@@ -8,6 +8,8 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..',
 
 from cards_proj.src.cards.api import CardsDB
 
+""" Multiple level fixtures. Fixture db can only be used in fixture cards_db if it is of equal or wider scope """
+
 @pytest.fixture(scope="session")
 def db():
     """CardsDB object connected to a temporary database"""
@@ -17,7 +19,6 @@ def db():
 
         yield db_ # Set up
         db_.close() # Tear down
-
 
 
 @pytest.fixture(scope="function")

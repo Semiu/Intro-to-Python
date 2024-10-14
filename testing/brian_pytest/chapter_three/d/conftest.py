@@ -39,4 +39,3 @@ def pytest_addoption(parser):
         default=False,
         help="new db for each test"
     )
-

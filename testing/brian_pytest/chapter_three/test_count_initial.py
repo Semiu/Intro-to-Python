@@ -8,6 +8,8 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 from cards_proj.src.cards.db import DB
 from cards_proj.src.cards.api import CardsDB
 
+""" Fixture not used. Therefore, the DB ojects are defined individually in the two test functions """
+
 def test_empty_db():
     with TemporaryDirectory() as db_dir:
         db_path = Path(db_dir) # Pathlib as standard way of representing system paths. The 

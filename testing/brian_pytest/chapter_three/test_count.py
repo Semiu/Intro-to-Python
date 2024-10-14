@@ -8,6 +8,8 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 
 from cards_proj.src.cards.api import Card, CardsDB
 
+""" Fixture used. Therefore, the cards_db needs to be defined once. Then, used in the two test functions """
+
 @pytest.fixture()
 def cards_db():
     with TemporaryDirectory() as cards_db_dir:
@@ -20,8 +22,9 @@ def cards_db():
 def test_empty(cards_db):
     assert cards_db.count() == 0
 
-
 def test_count(cards_db):
+    # Test runs immediately after the yield statement (set up)
+    # It is after the test run that the DB object closes (tear down)
     cards_db.add_card(Card("first"))
     cards_db.add_card(Card("second"))
 
