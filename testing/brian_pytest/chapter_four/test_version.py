@@ -1,6 +1,7 @@
 import subprocess
 import os
 import sys
+from typer.testing import CliRunner
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from cards_proj.src import cards
@@ -23,5 +24,13 @@ def test_version_v2(capsys):
     """
     cards.cli.version() # Writes the version to CLI
     output = capsys.readouterr().out.rstrip() # Reads and formats what is written to the CLI
+
+    assert output == cards.__version__
+
+def test_version_v3():
+    """ Another way of testing the CLI output through the CliRunner from the typer library """
+    runner = CliRunner()
+    result = runner.invoke(cards.app, ["version"])
+    output = result.output.rstrip()
 
     assert output == cards.__version__
