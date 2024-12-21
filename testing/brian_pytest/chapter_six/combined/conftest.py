@@ -7,6 +7,7 @@ from tempfile import TemporaryDirectory
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
 from cards_proj.src.cards.api import CardsDB
+from cards_proj.src import cards
 
 @pytest.fixture(scope="session")
 def cards_db():
@@ -17,3 +18,25 @@ def cards_db():
 
         yield cards_db # Set up
         cards_db.close() # Tear down
+
+@pytest.fixture(scope="function")
+def cards_db_session(cards_db, request, faker):
+    """
+    request: to get a MArker object if the test is marked 'num_cards'
+    faker: 
+    page 90 of the Brian Okken's book for further details
+    """
+    db = cards_db
+    db.delete_all()
+
+    # support for `@pytest.mark.num_cards(<some numbers)` in the test_num_cards.py
+    # random seed
+    faker.seed_instance(101)
+    m = request.node.get_closest_marker("num_cards")
+    if m and len(m.args) > 0:
+        num_cards = m.args[0]
+        for _ in range(num_cards):
+            db.add_card(
+                cards.Card(summary=faker.sentence(), owner=faker.first_name())
+            )
+    return db

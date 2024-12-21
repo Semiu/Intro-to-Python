@@ -7,7 +7,6 @@ class Calculator:
         >>> c = Calculator()
         >>> c.add_int(1,1)
         2
-
         >>> c.add_int(12, 15)
         27
         """

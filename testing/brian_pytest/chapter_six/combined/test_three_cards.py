@@ -10,21 +10,21 @@ Combining markers with fixtures. The builtin markers took parameters while the c
 Set to create new marker called num_cards which can be passed to the cards fixture
 """
 @pytest.fixture(scope="function")
-def cards_db(session_cards_db):
+def cards_db(cards_db):
     """
     original fixture for tests that expect empty database
     """
-    db = session_cards_db
+    db = cards_db
     db.delete_all()
     return db
 
 
 @pytest.fixture(scope="function")
-def cards_db_three_cards(session_cards_db):
+def cards_db_three_cards(cards_db):
     """
     the new fixture for tests that expect the database 
     """
-    db = session_cards_db
+    db = cards_db
     # start with empty
     db.delete_all()
 
